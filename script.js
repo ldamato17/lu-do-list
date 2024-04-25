@@ -22,12 +22,15 @@ class LUDOList {
     }
 
     renderTasks() {
-        const todo = document.getElementById("todo");
-        todo.innerHTML = ''; 
+        const todo = document.getElementById("list");
+        todo.innerHTML = '';
         this.tasks.forEach((task, index) => {
             const li = document.createElement('li');
-            li.textContent = task;
-            li.addEventListener('click', () => this.completeTask(index));
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            li.appendChild(checkbox);
+            const taskText = document.createTextNode(task);
+            li.appendChild(taskText);
             todo.appendChild(li);
         });
     }
