@@ -11,3 +11,26 @@ h1:hover{
     color: greenyellow;
 }
 
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"]{
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#todo{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
