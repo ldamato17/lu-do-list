@@ -4,11 +4,24 @@
 }
 
 h1{
-    color: orangered;
     text-align: center;
 }
-h1:hover{
-    color: greenyellow;
+
+.loghi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+#choice img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+
 }
 
 .container{

@@ -24,6 +24,13 @@ class LUDOList {
     renderTasks() {
         const todo = document.getElementById("list");
         todo.innerHTML = '';
+        if(this.tasks.length === 0) {
+            const p = document.createElement('p');
+            const text = document.createTextNode('Nothing to do here!');
+            p.appendChild(text);
+            todo.appendChild(p);
+            return;
+        }
         this.tasks.forEach((task, index) => {
             const li = document.createElement('li');
             const checkbox = document.createElement('input');
@@ -39,6 +46,25 @@ class LUDOList {
 document.addEventListener('DOMContentLoaded', () => {
     const ludoList = new LUDOList();
     ludoList.renderTasks();
+
+    
+    document.getElementById("btmanlogo").addEventListener("click", ()=>{
+        document.body.style.backgroundColor = "yellow";
+        document.getElementById("input").placeholder = "Batman cosa farai a Gotham oggi?";
+        document.body.style.color = "black";
+    })
+
+    document.getElementById("flashlogo").addEventListener("click", ()=>{
+        document.body.style.backgroundColor = "red";
+        document.getElementById("input").placeholder = "Flash cosa farai a Central City oggi?";
+        document.body.style.color = "yellow";
+    })
+
+    document.getElementById("jklogo").addEventListener("click", ()=>{
+        document.body.style.backgroundColor = "green";
+        document.getElementById("input").placeholder = "Joker quale pazzia farai oggi?";
+        document.body.style.color = "purple";
+    })
 
     document.getElementById("add").addEventListener("click", () => {
         const input = document.getElementById("input");
