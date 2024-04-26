@@ -31,6 +31,13 @@ h1{
     align-items: center;
 }
 
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 input[type="text"]{
     width: 25%;
     padding: 10px;
